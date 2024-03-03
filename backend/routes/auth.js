@@ -4,7 +4,7 @@ const { body, validationResult } = require('express-validator')
 
 router = express.Router()
 
-router.post('/', body('name', "Enter name greater than 3 chars").isLength({ min: 3 }), body('email', "Enter valid email").isEmail(), body('password', "Enter password greater than 5 chars").isLength({ min: 5 }), async(req, res) => {
+router.post('/createUser', body('name', "Enter name greater than 3 chars").isLength({ min: 3 }), body('email', "Enter valid email").isEmail(), body('password', "Enter password greater than 5 chars").isLength({ min: 5 }), async(req, res) => {
     const result = validationResult(req)
     if (result.isEmpty()) {
         console.log(req.body)

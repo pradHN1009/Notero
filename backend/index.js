@@ -6,7 +6,7 @@ const notes = require('./models/Notes')
 connectToMongo();
 
 const app = express()
-const port = 3000
+const port = 6000
 
 app.use(express.json()) //Middleware to access body of request
 
